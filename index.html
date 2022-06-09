@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="javascript/js.js"></script>
+    <title>FloresFiveTeam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script>
+        
+        function displayimg(colores){
+            var floresimg= new Array(5);
+            floresimg[0]="imagenes/rosas_rojas.jpg";
+            floresimg[1]="imagenes/rosas_rosas.jpg";
+            floresimg[2]="imagenes/rosas_amarillas.jpg";
+            floresimg[3]="imagenes/rosas_blancas.jpg";
+            floresimg[4]="imagenes/rosas_multi.jpg";
+            document.getElementById('flores').src =
+            floresimg[parseInt(colores.value)];
+
+}
+        function validarFormulario(n,a,d,p,po,pro){
+            if(n =="" || a=="" || d=="" || p=="" || po=="" || pro==""){
+                alert("Revisa los campos requeridos");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Flores a Domicilio</h1>
+    </header>
+    <div>
+        <section id="contenedor">
+            <img id="flores" src="imagenes/rosas_rojas.jpg" alt="Ramo de flores">
+        <h2>Tu Pedido</h2>
+            <p>Ramo de rosas</p> 
+            <div class="parrafos">
+                <p>Todas nuestras flores y plantas son confeccionados en el día de la entrega.</p>
+                <p>Envío de flores a cualquier punto de la península: ramos de flores, rosas, cestas y centros de flores y plantas, además de todo tipo de arreglos florales.</p>
+                <br>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            </div>   
+       
+
+        </section>
+
+    <aside>
+    <form action="#" method="post">
+    <fieldset class="ramo"> <legend>Ramo</legend>
+<div class="colores">
+<input type="radio" checked name="ramo" value=0 onclick="displayimg(this);"><p>Rosas Rojas</p>
+<input type="radio" name="ramo" value=1  onclick="displayimg(this);"><p>Rosas Rosas</p>
+<input type="radio" name="ramo" value=2  onclick="displayimg(this);"><p>Rosas Amarillas</p>
+<input type="radio" name="ramo" value=3  onclick="displayimg(this);"><p>Rosas blancas</p>
+<input type="radio" name="ramo" value=4  onclick="displayimg(this);"><p>Rosas multicolor</p>
+</div>
+<label for="color">Elige el color de la tarjeta y los complementarios que deseas añadir</label>
+<div class="complementos">
+<input type="color" name="color" >
+<input type="checkbox"> Tarjeta
+<input type="checkbox"> Jarrón
+<input type="checkbox"> Cesta
+</div>
+<label for="area"> Escribe tu dedicatoria:  </label><br>
+<textarea rows="5" cols="70"></textarea><br>
+<small>(Max. 250 carácteres)</small>
+
+
+
+</fieldset>
+<fieldset>
+    <legend>Tus datos </legend>
+    <div class="tusdatos">
+    <label for="name">Nombre:<span>*</span></label>
+    <input name="name" type="text">
+    </div>
+    <div class="tusdatos">
+    <label for="Apellidos">Apellidos:<span>*</span></label>
+    <input type="text" name="Apellidos">
+</div>
+<div class="tele">
+    <label for="telefono">Teléfono:<span>*</span></label>
+<input type="number" name="telefono">
+</div>
+<div class="mail">
+<label for="email">Email:</label>
+<input type="email" name="email" placeholder="Ej:Nombre@cuenta.com">
+</div>
+
+</fieldset>
+
+<fieldset>
+    <legend>Entregar a </legend>
+    <div class="tusdatos">
+    <label for="n">Nombre:<span>*</span></label>   
+    <input name="n" type="text">
+</div>
+    <div class="tusdatos">
+    <label for="a">Apellidos:<span>*</span></label>
+    <input type="text" name="a">
+</div>
+    <div class="envio">
+    <label for="d">Dirección de envío: <span>*</span></label> 
+    <input name="d" type="text">
+</div>
+    <div class="postal">
+    <label for="p">Código postal: <span>*</span></label> 
+    <input name="p" type="number">
+</div>
+    <div class="tele">
+    <label for="po">Población: <span>*</span></label> 
+    <input name="po" type="text">
+</div>
+    <div class="tele">
+    <label for="pro">Provincia: <span>*</span></label> 
+    <input name="pro" type="text">
+</div>
+    <div class="tele">
+    <label for="fecha">Fecha de entrega:<span>*</span></label>
+    <input type="date" name="fecha">
+</div>
+    <div class="tele">
+    <label for="hora">Horario de Entrega</label>
+    <select name="hora">
+        <option value="Mañana">Mañana</option>
+        <option value="Tarde">Tarde</option>
+        </select>
+    </div>
+
+
+  
+
+</fieldset>
+<fieldset class="pago">
+    <legend>Pago </legend>
+    <label for="pago">Elige la forma de pago:</label>
+    <input type="radio" name="Pago">Paypal
+    <input type="radio" name="Pago">Tarjeta
+   
+
+</fieldset>
+<div class="boton">
+<input type="submit" value= "Enviar" onclick="validarFormulario(n.value,a.value,d.value,p.value,po.value,pro.value)">
+<input type="reset" value="Borrar">
+</div>
+</form>
+</aside>
+</div>
+<footer>
+<small>2022 High Five Team</small>
+</footer>
+</body>
+</html>

@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(../imagenes/803938-flower-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Alegreya Sans', sans-serif;
+    width: 80%;
+    margin: auto;
+}
+header{
+    text-align: center;
+    background-color: rgba(0,0,0,0.7);
+    margin: 20px 0;
+}
+section{
+    float: left;
+    background-color: white;
+    color: black;
+    width: 50%;
+    text-align: center;
+    padding-bottom: 90px;
+}
+.parrafos{
+    margin: 10px;
+    text-align: left;
+}
+aside{
+    background-color: rgba(0,0,0,0.7);
+    width: 50%;
+    float: right;
+}
+fieldset{
+    padding: 10px;
+    margin: 10px 10px;
+}
+legend, h1{
+    font-family: 'Pacifico', cursive;
+}
+.ramo input{
+    margin: 5px 0;
+    margin-bottom: 10px;
+    margin-right: 3px;
+}
+.colores p{
+    display: inline-block;
+    width: 175px;
+}
+.complementos input{
+    margin-left: 20px;
+}
+.tusdatos input{
+    display: block;
+    width: 400px;
+}
+.tele, .mail{
+    display: inline-block;
+}
+.tele input, .mail input{
+    display: block;
+}
+.tele{
+    margin-right: 56px;
+}
+span{
+    color: red;
+}
+.envio, .postal{
+    display: inline-block;
+}
+.envio input, .postal input{
+    display: block;
+}
+.envio input{
+    width: 400px;
+}
+.postal{
+    margin-left: 20px;
+}
+.postal input{
+    width: 85px;
+}
+select{
+    display: block;
+}
+.pago label{
+    display: block;
+}
+.pago input{
+    margin-left: 20px;
+}
+.boton{
+    text-align: center;
+}
+footer{
+    display: inline-block;
+    text-align: right;
+    background-color: rgba(0,0,0,0.7);
+    margin: 20px 0;
+    width: 100%;
+    padding: 10px 0;
+}
+small{
+    margin-right: 10px;
+}
